@@ -16,5 +16,25 @@ namespace Quản_lý_đăng_nhập
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+ 
+            string emailChuan = "0001168@st.huce.edu.vn";
+            string mssvChuan = "0001168"; // MSSV của Nguyễn Hà Tuấn Anh
+
+            
+            string inputEmail = textBox1.Text.Trim();
+            string inputPass = textBox2.Text.Trim();
+
+            if (inputEmail == emailChuan && inputPass == mssvChuan)
+            {
+                MessageBox.Show("Đăng nhập thành công", "Thông báo");
+            }
+            else
+            {
+                MessageBox.Show("Đăng nhập thất bại", "Thông báo");
+            }
+        }
     }
 }
