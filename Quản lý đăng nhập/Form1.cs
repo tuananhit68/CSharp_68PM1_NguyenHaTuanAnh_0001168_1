@@ -36,5 +36,10 @@ namespace Quản_lý_đăng_nhập
                 MessageBox.Show("Đăng nhập thất bại", "Thông báo");
             }
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
