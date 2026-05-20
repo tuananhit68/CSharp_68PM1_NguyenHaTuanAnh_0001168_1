@@ -1,6 +1,6 @@
 ﻿namespace Quản_lý_đăng_nhập
 {
-    partial class Form1
+    partial class login
     {
         /// <summary>
         /// Required designer variable.
@@ -83,6 +83,7 @@
             this.textBox2.Size = new System.Drawing.Size(208, 26);
             this.textBox2.TabIndex = 4;
             this.textBox2.UseWaitCursor = true;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button1
             // 
@@ -97,7 +98,7 @@
             this.button1.UseWaitCursor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form1
+            // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -108,7 +109,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "login";
             this.Text = "Form1";
             this.UseWaitCursor = true;
             this.ResumeLayout(false);

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Quản_lý_đăng_nhập
 {
-    public partial class Form1 : Form
+    public partial class login : Form
     {
-        public Form1()
+        public login()
         {
             InitializeComponent();
         }
@@ -38,6 +38,11 @@ namespace Quản_lý_đăng_nhập
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
