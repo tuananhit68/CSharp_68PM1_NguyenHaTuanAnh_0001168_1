@@ -32,13 +32,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.colLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button7 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_MaSV = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvSinhVien = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
@@ -49,14 +44,14 @@
             this.button4 = new System.Windows.Forms.Button();
             this.Sửa = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.cbo_GioiTinh = new System.Windows.Forms.ComboBox();
+            this.dtp_NgaySinh = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_HoTen = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.cbo_MaLop = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSinhVien)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -97,41 +92,6 @@
             this.button5.Text = "<<";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // colLop
-            // 
-            this.colLop.HeaderText = "Lớp";
-            this.colLop.MinimumWidth = 8;
-            this.colLop.Name = "colLop";
-            this.colLop.ReadOnly = true;
-            // 
-            // colNgaySinh
-            // 
-            this.colNgaySinh.HeaderText = "Ngày Sinh";
-            this.colNgaySinh.MinimumWidth = 8;
-            this.colNgaySinh.Name = "colNgaySinh";
-            this.colNgaySinh.ReadOnly = true;
-            // 
-            // colGioiTinh
-            // 
-            this.colGioiTinh.HeaderText = "Giới Tính";
-            this.colGioiTinh.MinimumWidth = 8;
-            this.colGioiTinh.Name = "colGioiTinh";
-            this.colGioiTinh.ReadOnly = true;
-            // 
-            // colHoTen
-            // 
-            this.colHoTen.HeaderText = "Họ và Tên";
-            this.colHoTen.MinimumWidth = 8;
-            this.colHoTen.Name = "colHoTen";
-            this.colHoTen.ReadOnly = true;
-            // 
-            // colMaSV
-            // 
-            this.colMaSV.HeaderText = "Mã SV";
-            this.colMaSV.MinimumWidth = 8;
-            this.colMaSV.Name = "colMaSV";
-            this.colMaSV.ReadOnly = true;
-            // 
             // button7
             // 
             this.button7.Location = new System.Drawing.Point(882, 594);
@@ -141,13 +101,13 @@
             this.button7.Text = ">";
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txt_MaSV
             // 
-            this.textBox1.Location = new System.Drawing.Point(40, 72);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(333, 26);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txt_MaSV.Location = new System.Drawing.Point(40, 72);
+            this.txt_MaSV.Name = "txt_MaSV";
+            this.txt_MaSV.Size = new System.Drawing.Size(333, 26);
+            this.txt_MaSV.TabIndex = 1;
+            this.txt_MaSV.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -163,12 +123,6 @@
             this.dgvSinhVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSinhVien.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvSinhVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSinhVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colMaSV,
-            this.colHoTen,
-            this.colGioiTinh,
-            this.colNgaySinh,
-            this.colLop});
             this.dgvSinhVien.GridColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvSinhVien.Location = new System.Drawing.Point(459, 204);
             this.dgvSinhVien.Name = "dgvSinhVien";
@@ -200,6 +154,7 @@
             this.button1.TabIndex = 17;
             this.button1.Text = "Thêm";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button3
             // 
@@ -252,15 +207,15 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.cbo_MaLop);
+            this.groupBox1.Controls.Add(this.cbo_GioiTinh);
+            this.groupBox1.Controls.Add(this.dtp_NgaySinh);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txt_HoTen);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txt_MaSV);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 100);
@@ -270,28 +225,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin sinh viên";
             // 
-            // comboBox2
+            // cbo_GioiTinh
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(40, 332);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(333, 28);
-            this.comboBox2.TabIndex = 12;
+            this.cbo_GioiTinh.FormattingEnabled = true;
+            this.cbo_GioiTinh.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.cbo_GioiTinh.Location = new System.Drawing.Point(40, 332);
+            this.cbo_GioiTinh.Name = "cbo_GioiTinh";
+            this.cbo_GioiTinh.Size = new System.Drawing.Size(333, 28);
+            this.cbo_GioiTinh.TabIndex = 12;
             // 
-            // dateTimePicker1
+            // dtp_NgaySinh
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(40, 243);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(333, 26);
-            this.dateTimePicker1.TabIndex = 10;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(40, 428);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(333, 26);
-            this.textBox5.TabIndex = 9;
+            this.dtp_NgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_NgaySinh.Location = new System.Drawing.Point(40, 243);
+            this.dtp_NgaySinh.Name = "dtp_NgaySinh";
+            this.dtp_NgaySinh.Size = new System.Drawing.Size(333, 26);
+            this.dtp_NgaySinh.TabIndex = 10;
             // 
             // label5
             // 
@@ -320,13 +271,13 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Ngày sinh:";
             // 
-            // textBox2
+            // txt_HoTen
             // 
-            this.textBox2.Location = new System.Drawing.Point(40, 149);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(333, 26);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "   ";
+            this.txt_HoTen.Location = new System.Drawing.Point(40, 149);
+            this.txt_HoTen.Name = "txt_HoTen";
+            this.txt_HoTen.Size = new System.Drawing.Size(333, 26);
+            this.txt_HoTen.TabIndex = 3;
+            this.txt_HoTen.Text = "   ";
             // 
             // label2
             // 
@@ -336,6 +287,14 @@
             this.label2.Size = new System.Drawing.Size(81, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Họ và tên:";
+            // 
+            // cbo_MaLop
+            // 
+            this.cbo_MaLop.FormattingEnabled = true;
+            this.cbo_MaLop.Location = new System.Drawing.Point(40, 415);
+            this.cbo_MaLop.Name = "cbo_MaLop";
+            this.cbo_MaLop.Size = new System.Drawing.Size(333, 28);
+            this.cbo_MaLop.TabIndex = 13;
             // 
             // UC_QLSV
             // 
@@ -357,6 +316,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "UC_QLSV";
             this.Size = new System.Drawing.Size(1197, 766);
+            this.Load += new System.EventHandler(this.UC_QLSV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSinhVien)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -371,13 +331,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colLop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNgaySinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colGioiTinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colHoTen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMaSV;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_MaSV;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvSinhVien;
         private System.Windows.Forms.Button button2;
@@ -388,13 +343,13 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button Sửa;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.ComboBox cbo_GioiTinh;
+        private System.Windows.Forms.DateTimePicker dtp_NgaySinh;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_HoTen;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cbo_MaLop;
     }
 }

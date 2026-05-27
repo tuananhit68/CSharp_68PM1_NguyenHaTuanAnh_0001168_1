@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="QLSV">
+  <DataContextMoniker Name="/QLSVDataContext" />
+  <nestedChildShapes>
+    <classShape Id="92d2b4bb-0f2c-4352-9915-3d75d9e9442b" absoluteBounds="2, 1.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/QLSVDataContext/LopHoc" />
+      <nestedChildShapes>
+        <elementListCompartment Id="91af92be-9d79-4e3e-b743-cfd3341a4430" absoluteBounds="2.015, 1.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cd186ee3-e5f5-473a-8a49-7c93241c280d" absoluteBounds="5.375, 2.25, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/QLSVDataContext/SinhVien" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b0c1d3d2-2017-4f4e-83fe-dcb8f2e20c1b" absoluteBounds="5.39, 2.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4 : 2.60179768880208); (5.375 : 2.60179768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QLSVDataContext/LopHoc/LopHoc_SinhVien" />
+      <nodes>
+        <classShapeMoniker Id="92d2b4bb-0f2c-4352-9915-3d75d9e9442b" />
+        <classShapeMoniker Id="cd186ee3-e5f5-473a-8a49-7c93241c280d" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
