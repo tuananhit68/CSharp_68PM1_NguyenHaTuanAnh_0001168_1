@@ -147,7 +147,6 @@ namespace Quản_lý_đăng_nhập
                 LoadData();
             }
         }
-
         private void btn_Sau_Click(object sender, EventArgs e)
         {
             int tongSoSinhVien = db.SinhViens.Count();
