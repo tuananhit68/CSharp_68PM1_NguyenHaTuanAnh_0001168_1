@@ -78,7 +78,6 @@ namespace Quản_lý_đăng_nhập
         {
 
         }
-
         private void btn_Them_Click(object sender, EventArgs e)
         {
             LopHoc lh = new LopHoc();
