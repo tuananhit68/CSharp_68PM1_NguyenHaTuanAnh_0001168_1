@@ -106,7 +106,6 @@ namespace Quản_lý_đăng_nhập
                 MessageBox.Show("Không tìm thấy sinh viên để xóa!");
             }
         }
-
         private void button5_Click(object sender, EventArgs e)
         {
 
